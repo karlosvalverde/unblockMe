@@ -29,6 +29,22 @@ function observeAndRemoveClasses() {
         });
     }
 
+    // Function to remove IDs from newly added elements (during mutations)
+    function removeIDsFromMutations(mutations) {
+        mutations.forEach(mutation => {
+            // If nodes are added, check if any have the specified IDs
+            mutation.addedNodes.forEach(node => {
+                if (node.nodeType === 1) { // Ensure it's an element node
+                    idsToRemove.forEach(id => {
+                        if (node.id === id) {
+                            node.remove(); // Remove the node with the matching ID
+                        }
+                    });
+                }
+            });
+        });
+    }
+
     // Initial removal of classes and nodes with IDs
     removeClasses();
     removeIDs();
@@ -37,6 +53,7 @@ function observeAndRemoveClasses() {
     const observer = new MutationObserver(() => {
         removeClasses(); // Remove classes whenever the DOM is updated
         removeIDs();     // Remove nodes with IDs whenever the DOM is updated
+        removeIDsFromMutations(mutations); // Remove nodes with IDs whenever new nodes are added
     });
 
     // Start observing the document for any changes in the subtree
