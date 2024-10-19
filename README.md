@@ -19,6 +19,7 @@ Firefox extension to remove any class or nodes with specific IDs added by any we
 --
 
 **Versions**
+
 0.2
 
 Added - IDs remover
