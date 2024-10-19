@@ -23,7 +23,6 @@ Firefox extension to remove any class or nodes with specific IDs added by any we
 
 Added - IDs remover
 
--
 
 0.1
 
