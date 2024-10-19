@@ -7,7 +7,7 @@ document.getElementById('removeClass').addEventListener('click', () => {
     });
 
     function removeClasses() {
-        const classesToRemove = ['bodyBlocked', 'didomi-popup-open'];
+        const classesToRemove = ['first-class', 'second-class'];
 
         classesToRemove.forEach(className => {
             let elements = document.querySelectorAll('.' + className);
