@@ -1,0 +1,16 @@
+{
+    "manifest_version": 3,
+    "name": "unblockMe",
+    "version": "0.1",
+    "description": "Firefox extension to remove any class added by any website.",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "background": {
+        "scripts": ["background.js"]
+    },
+    "action": {
+        "default_popup": "popup.html"
+    }
+}
