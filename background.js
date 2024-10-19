@@ -6,8 +6,8 @@ browser.action.onClicked.addListener((tab) => {
 });
 
 function observeAndRemoveClasses() {
-    const classesToRemove = ['first-class', 'second-class', 'third-class'];
-    const idsToRemove = ['first-id', 'second-id']; // List of IDs to remove
+    const classesToRemove = ['bodyBlocked', 'bodyBlocked', 'v2'];
+    const idsToRemove = ['didomi-host'];
 
     // Function to remove the classes from all matching elements
     function removeClasses() {
